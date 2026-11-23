@@ -22,7 +22,13 @@ export default function Inicio() {
           <div key={destino.id} className="tarjeta-destino">
             <div className="tarjeta-imagen-contenedor">
               <span className="badge-destacado">⭐ Destacado</span>
-              <img src={destino.imagen} alt={destino.nombre} />
+              <img 
+                src={destino.imagen} 
+                alt={`Vista turística de ${destino.nombre}`} 
+                loading="lazy" 
+                width="300" 
+                height="190" 
+              />
             </div>
             <div className="tarjeta-contenido">
               <span className="etiqueta-categoria">{destino.categoria}</span>

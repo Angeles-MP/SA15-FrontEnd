@@ -17,7 +17,13 @@ export default function DetalleDestinos() {
   return (
     <div className="detalle-contenedor">
         <h1>{destino.nombre}</h1>
-        <img src={destino.imagen} alt={destino.nombre} />
+        <img 
+          src={destino.imagen} 
+          alt={`Fotografía principal de ${destino.nombre}`} 
+          loading="lazy" 
+          width="600" 
+          height="400" 
+        />
         <p><strong>Ciudad:</strong> {destino.ciudad} ({destino.region})</p>
         <p><strong>Categoría:</strong> {destino.categoria}</p>
         <p><strong>Descripción:</strong> {destino.descripcion}</p>

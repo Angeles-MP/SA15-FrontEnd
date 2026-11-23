@@ -14,7 +14,13 @@ export default function Destinos() {
     <div className="grid-destinos">
     {destinos.map((destino) => (
         <div key={destino.id} className="tarjeta-destino">
-        <img src={destino.imagen} alt={destino.nombre} />
+        <img 
+          src={destino.imagen} 
+          alt={`Destino turístico ${destino.nombre}`} 
+          loading="lazy" 
+          width="300" 
+          height="190" 
+        />
         <div className="tarjeta-contenido">
             <h2>{destino.nombre}</h2>
             <p><strong>Ubicación:</strong> {destino.ciudad}, {destino.region}</p>
